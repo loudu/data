@@ -6,15 +6,11 @@
   <title>DATA EN VRAC</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html, body { height: 100%; }
     body {
       background: #000;
       color: #fff;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-    }
-    header {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -25,8 +21,8 @@
     }
     h1 {
       font-size: clamp(2.5rem, 10vw, 6rem);
-      letter-spacing: 0.08em;
       font-weight: 800;
+      letter-spacing: 0.08em;
     }
     .boutons {
       display: flex;
@@ -34,73 +30,33 @@
       gap: 1.5rem;
       justify-content: center;
     }
-    .bouton {
-      display: inline-block;
+    button {
       min-width: 200px;
       padding: 1rem 2rem;
+      background: #000;
+      color: #fff;
       border: 2px solid #fff;
       border-radius: 999px;
-      color: #fff;
-      text-decoration: none;
+      font: inherit;
       font-size: 1.25rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      cursor: pointer;
       transition: background 0.2s, color 0.2s;
     }
-    .bouton:hover, .bouton:focus-visible {
+    button:hover, button:focus-visible {
       background: #fff;
       color: #000;
       outline: none;
     }
-    section {
-      min-height: 100vh;
-      padding: 4rem 16px;
-      max-width: 900px;
-      margin: 0 auto;
-      border-top: 1px solid #333;
-    }
-    h2 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      margin-bottom: 1.5rem;
-    }
-    .retour {
-      display: inline-block;
-      margin-top: 2rem;
-      color: #fff;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 16px;
-      border-top: 1px solid #333;
-      color: #aaa;
-      font-size: 0.9rem;
-    }
   </style>
 </head>
 <body>
-  <header id="haut">
-    <h1>DATA EN VRAC</h1>
-    <nav class="boutons">
-      <a class="bouton" href="#ecologie">Écologie</a>
-      <a class="bouton" href="#economie">Économie</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="ecologie">
-      <h2>Écologie</h2>
-      <p>Les données sur l'écologie arriveront ici.</p>
-      <a class="retour" href="#haut">↑ Retour en haut</a>
-    </section>
-
-    <section id="economie">
-      <h2>Économie</h2>
-      <p>Les données sur l'économie arriveront ici.</p>
-      <a class="retour" href="#haut">↑ Retour en haut</a>
-    </section>
-  </main>
-
-  <footer>DATA EN VRAC</footer>
+  <h1>DATA EN VRAC</h1>
+  <div class="boutons">
+    <button type="button">Écologie</button>
+    <button type="button">Économie</button>
+  </div>
 </body>
 </html>
